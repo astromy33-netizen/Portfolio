@@ -46,7 +46,7 @@ function App() {
 
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 Portfolio. Все права защищены.</p>
+          <p>&copy; 2025 Portfolio. Все права защищены.</p>
         </div>
       </footer>
     </div>
