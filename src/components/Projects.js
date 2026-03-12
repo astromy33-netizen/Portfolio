@@ -1,59 +1,85 @@
 import React from 'react';
 import './Projects.css';
+import { projects } from '../data/portfolioData';
 
 const Projects = () => {
-  const projects = [
-    {
-      id: 1,
-      title: 'Проект 1',
-      description: 'Описание проекта. Здесь будет информация о вашем проекте, используемых технологиях и достигнутых результатах.',
-      technologies: ['React', 'JavaScript', 'CSS'],
-      link: '#',
-      github: '#'
-    },
-    {
-      id: 2,
-      title: 'Проект 2',
-      description: 'Описание проекта. Здесь будет информация о вашем проекте, используемых технологиях и достигнутых результатах.',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-      link: '#',
-      github: '#'
-    },
-    {
-      id: 3,
-      title: 'Проект 3',
-      description: 'Описание проекта. Здесь будет информация о вашем проекте, используемых технологиях и достигнутых результатах.',
-      technologies: ['React', 'Redux Toolkit', 'JavaScript'],
-      link: '#',
-      github: '#'
-    },
-  ];
-
   return (
-    <section id="projects" className="projects-section">
+    <section id="projects" className="projects-section section-block">
       <div className="container">
-        <h2 className="section-title">Projects</h2>
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <div key={project.id} className="project-card">
-              <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                <div className="project-technologies">
-                  {project.technologies.map((tech, index) => (
-                    <span key={index} className="tech-tag">{tech}</span>
-                  ))}
+        <div className="section-head" data-reveal>
+          <span className="section-kicker">Проекты</span>
+          <h2 className="section-title">Реальные задачи, React, Redux и API</h2>
+          <p className="section-intro">
+            Главный акцент здесь на проектах: что сделано, с какими технологиями
+            работал и какую пользу приносил в рамках frontend-части.
+          </p>
+        </div>
+
+        <div className="projects-list">
+          {projects.map((project, index) => (
+            <article
+              key={project.name}
+              className="project-card"
+              data-reveal
+              style={{ '--reveal-delay': `${index * 0.08}s` }}
+            >
+              <div className="project-top">
+                <div>
+                  <span className="project-index">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="project-title">{project.name}</h3>
                 </div>
-                <div className="project-links">
-                  <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
-                    Live Demo
-                  </a>
-                  <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
-                    GitHub
-                  </a>
+                <span className="project-role">{project.role}</span>
+              </div>
+
+              <p className="project-description">{project.description}</p>
+
+              <div className="project-meta">
+                <div className="project-block">
+                  <p className="project-label">Технологии</p>
+                  <div className="project-tags">
+                    {project.stack.map((item) => (
+                      <span key={item} className="project-tag">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="project-block">
+                  <p className="project-label">Что сделал я</p>
+                  <ul className="project-points">
+                    {project.contributions.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-            </div>
+
+              <div className="project-actions">
+                <a
+                  href={project.githubUrl}
+                  className="project-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {project.githubLabel}
+                </a>
+                {project.demoUrl ? (
+                  <a
+                    href={project.demoUrl}
+                    className="project-link project-link-secondary"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {project.demoLabel}
+                  </a>
+                ) : (
+                  <span className="project-note">{project.demoNote}</span>
+                )}
+              </div>
+            </article>
           ))}
         </div>
       </div>
@@ -62,5 +88,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-

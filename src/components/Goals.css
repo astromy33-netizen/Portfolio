@@ -1,0 +1,54 @@
+.goals-card {
+  align-items: start;
+  background: var(--surface-inverse);
+  border-radius: 32px;
+  color: #eff7f5;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+  padding: 34px;
+}
+
+.goals-card .section-kicker {
+  color: rgba(239, 247, 245, 0.72);
+}
+
+.goals-card .section-title {
+  margin-top: 10px;
+}
+
+.goals-text {
+  color: rgba(239, 247, 245, 0.88);
+  line-height: 1.82;
+  margin-top: 18px;
+  max-width: 60ch;
+}
+
+.goal-points {
+  display: grid;
+  gap: 12px;
+  list-style: none;
+}
+
+.goal-points li {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  color: rgba(239, 247, 245, 0.92);
+  line-height: 1.68;
+  padding: 14px 16px;
+}
+
+@media (max-width: 900px) {
+  .goals-card {
+    grid-template-columns: 1fr;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .goals-card {
+    border-radius: 24px;
+    padding: 22px;
+  }
+}

@@ -1,31 +1,29 @@
 import React from 'react';
 import './About.css';
+import { aboutHighlights, profile } from '../data/portfolioData';
 
 const About = () => {
   return (
-    <section id="about" className="about-section">
+    <section id="about" className="about-section section-block">
       <div className="container">
-        <h2 className="section-title">About Me</h2>
-        <div className="about-content">
-          <div className="about-text">
-            <p className="about-intro">
-              Привет! Я начинающий Frontend-разработчик, увлеченный созданием современных и интерактивных веб-приложений.
-            </p>
-            <p>
-              Мой путь в веб-разработке начался с изучения основ HTML и CSS, и с тех пор я постоянно расширяю свои знания, 
-              осваивая современные технологии и фреймворки. Я верю, что хороший код — это не только функциональность, 
-              но и чистота, читаемость и производительность.
-            </p>
-            <p>
-              В настоящее время я активно изучаю React и экосистему вокруг него, включая управление состоянием, 
-              работу с API и создание адаптивных пользовательских интерфейсов. Мне нравится решать сложные задачи 
-              и превращать идеи в реальные проекты.
-            </p>
-            <p>
-              Я всегда открыт для новых возможностей и готов применить свои навыки в интересных проектах. 
-              Если у вас есть идея, которую нужно реализовать, давайте обсудим!
-            </p>
-          </div>
+        <div className="section-head" data-reveal>
+          <span className="section-kicker">Обо мне</span>
+          <h2 className="section-title">Коротко и по делу</h2>
+          <p className="section-intro">{profile.about}</p>
+        </div>
+
+        <div className="about-grid">
+          {aboutHighlights.map((item, index) => (
+            <article
+              key={item.title}
+              className="about-card"
+              data-reveal
+              style={{ '--reveal-delay': `${index * 0.08}s` }}
+            >
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
@@ -33,5 +31,3 @@ const About = () => {
 };
 
 export default About;
-
-

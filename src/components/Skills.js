@@ -1,35 +1,37 @@
 import React from 'react';
 import './Skills.css';
+import { stackCategories } from '../data/portfolioData';
 
 const Skills = () => {
-  const skills = [
-    { name: 'HTML', level: 85 },
-    { name: 'CSS', level: 80 },
-    { name: 'JavaScript', level: 75 },
-    { name: 'React', level: 70 },
-    { name: 'Redux Toolkit', level: 65 },
-    { name: 'TypeScript', level: 60 },
-    { name: 'Tailwind CSS', level: 70 },
-  ];
-
   return (
-    <section id="skills" className="skills-section">
+    <section id="skills" className="skills-section section-block">
       <div className="container">
-        <h2 className="section-title">Skills</h2>
+        <div className="section-head" data-reveal>
+          <span className="section-kicker">Стек технологий</span>
+          <h2 className="section-title">Технологии по категориям</h2>
+          <p className="section-intro">
+            Стек собран так, чтобы сразу показать основу frontend-разработки,
+            опыт интеграции с API и инструменты, с которыми я работаю каждый день.
+          </p>
+        </div>
+
         <div className="skills-grid">
-          {skills.map((skill, index) => (
-            <div key={index} className="skill-card">
-              <div className="skill-header">
-                <h3 className="skill-name">{skill.name}</h3>
-                <span className="skill-percentage">{skill.level}%</span>
+          {stackCategories.map((category, index) => (
+            <article
+              key={category.title}
+              className="skill-group"
+              data-reveal
+              style={{ '--reveal-delay': `${index * 0.08}s` }}
+            >
+              <h3>{category.title}</h3>
+              <div className="skill-tags">
+                {category.items.map((item) => (
+                  <span key={item} className="skill-tag">
+                    {item}
+                  </span>
+                ))}
               </div>
-              <div className="skill-bar">
-                <div 
-                  className="skill-progress" 
-                  style={{ width: `${skill.level}%` }}
-                ></div>
-              </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
@@ -38,5 +40,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Резюме | Дастан Кутманбеков</title>
+    <style>
+      :root {
+        --surface: #fffdf9;
+        --ink: #182325;
+        --muted: #5d6768;
+        --accent: #1c4c47;
+        --line: rgba(24, 35, 37, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #f7f2eb 0%, #efe7db 100%);
+        color: var(--ink);
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      .page {
+        margin: 0 auto;
+        max-width: 980px;
+        padding: 40px 20px 60px;
+      }
+
+      .hero,
+      .section {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 28px;
+      }
+
+      .hero {
+        margin-bottom: 20px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p,
+      ul {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+        line-height: 1;
+      }
+
+      .role {
+        color: var(--accent);
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 12px;
+      }
+
+      .summary {
+        color: var(--muted);
+        line-height: 1.75;
+        margin-top: 18px;
+        max-width: 64ch;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      .actions a {
+        background: var(--accent);
+        border-radius: 999px;
+        color: #f4f7f7;
+        font-weight: 700;
+        padding: 12px 16px;
+        text-decoration: none;
+      }
+
+      .grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 20px;
+      }
+
+      .section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 14px;
+      }
+
+      .section p {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .tags,
+      .contacts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .tag {
+        background: rgba(28, 76, 71, 0.08);
+        border: 1px solid rgba(28, 76, 71, 0.12);
+        border-radius: 999px;
+        color: var(--accent);
+        font-size: 0.94rem;
+        font-weight: 700;
+        padding: 9px 12px;
+      }
+
+      .project {
+        border-top: 1px solid var(--line);
+        margin-top: 18px;
+        padding-top: 18px;
+      }
+
+      .project:first-of-type {
+        border-top: 0;
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      .project h3 {
+        font-size: 1.15rem;
+        margin-bottom: 10px;
+      }
+
+      .project-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 12px;
+      }
+
+      .project-links a {
+        border: 1px solid rgba(28, 76, 71, 0.14);
+        border-radius: 999px;
+        color: var(--accent);
+        font-size: 0.92rem;
+        font-weight: 700;
+        padding: 9px 12px;
+        text-decoration: none;
+      }
+
+      .project .meta,
+      .contacts {
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+
+      .project ul,
+      .list {
+        color: var(--muted);
+        line-height: 1.7;
+        margin-top: 10px;
+        padding-left: 18px;
+      }
+
+      .contacts {
+        display: grid;
+        gap: 10px;
+      }
+
+      .contacts strong {
+        color: var(--ink);
+      }
+
+      @media (max-width: 720px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <h1>Дастан Кутманбеков</h1>
+        <p class="role">Frontend Developer | React Developer</p>
+        <p class="summary">
+          Начинающий frontend-разработчик, специализируюсь на React, Redux и
+          создании удобных веб-интерфейсов. Работаю с REST API, Axios,
+          адаптивной версткой и умею подключать frontend к backend. Ищу
+          возможность расти в команде и применять знания на реальных проектах.
+        </p>
+        <div class="actions">
+          <a href="mailto:astromy33@gmail.com">Email</a>
+          <a href="https://github.com/astromy33-netizen" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+
+      <div class="grid">
+        <section class="section">
+          <h2>Обо мне</h2>
+          <p>
+            Я frontend-разработчик, который активно развивается в создании
+            современных веб-приложений. Уже работал над проектами с
+            использованием React, Redux, Axios, Node.js, Swagger и Supabase.
+            Люблю понятный интерфейс, чистый код и постоянное развитие.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Контакты</h2>
+          <div class="contacts">
+            <div><strong>Телефон:</strong> По запросу</div>
+            <div><strong>Email:</strong> astromy33@gmail.com</div>
+            <div><strong>GitHub:</strong> github.com/astromy33-netizen</div>
+            <div><strong>Город:</strong> Бишкек</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Стек</h2>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Redux</span>
+            <span class="tag">Redux Toolkit</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">REST API</span>
+            <span class="tag">Swagger</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Axios</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Figma</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Чем полезен команде</h2>
+          <ul class="list">
+            <li>быстро обучаюсь новым технологиям</li>
+            <li>умею работать с React и Redux на практике</li>
+            <li>понимаю, как подключать frontend к backend</li>
+            <li>стараюсь писать понятный и аккуратный код</li>
+            <li>умею доводить учебные проекты до рабочего результата</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="section" style="margin-top: 20px;">
+        <h2>Проекты</h2>
+
+        <article class="project">
+          <h3>PULSAR</h3>
+          <p class="meta">Технологии: React, Redux, Axios, Supabase</p>
+          <p class="meta">
+            Описание: Веб-приложение с современным интерфейсом, реализована
+            работа с данными, управление состоянием и взаимодействие с backend.
+          </p>
+          <ul>
+            <li>построил структуру компонентов</li>
+            <li>подключил API</li>
+            <li>реализовал управление состоянием через Redux</li>
+            <li>настроил работу с данными через Supabase</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/astromy33-netizen/Pulsar-techno-shop" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://pulsar-pro.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>ArunaStudy</h3>
+          <p class="meta">Технологии: React, Redux, Node.js, Swagger</p>
+          <p class="meta">
+            Описание: Учебная платформа / веб-сервис для работы с
+            пользовательскими данными и API.
+          </p>
+          <ul>
+            <li>разработал frontend-интерфейс</li>
+            <li>подключил backend через API</li>
+            <li>использовал Swagger для понимания и тестирования endpoint-ов</li>
+            <li>реализовал удобную логику отображения данных</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/astromy33-netizen" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://project-aruna-study.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Akaktish</h3>
+          <p class="meta">Технологии: React, Redux, Node.js, Swagger</p>
+          <p class="meta">
+            Описание: Веб-проект с клиентской частью, интеграцией с backend и
+            обработкой пользовательских данных.
+          </p>
+          <ul>
+            <li>сверстал интерфейсы</li>
+            <li>подключил запросы к серверу</li>
+            <li>организовал логику работы компонентов</li>
+            <li>улучшал структуру и читаемость кода</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/astromy33-netizen" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://akak-tish.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <h3>Mebel Mart</h3>
+          <p class="meta">Технологии: HTML, CSS, JavaScript, Responsive Layout</p>
+          <p class="meta">
+            Описание: Интернет-магазин мебели с каталогом товаров, карточками и
+            удобной навигацией для пользователя.
+          </p>
+          <ul>
+            <li>собрал интерфейс каталога и карточек товаров</li>
+            <li>организовал структуру страниц и навигацию по разделам</li>
+            <li>сделал адаптивную верстку для разных экранов</li>
+            <li>подготовил проект к публикации на Vercel</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/astromy33-netizen/Mebelshop" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://wwwmebelshop.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
